@@ -2,8 +2,6 @@ package lottery;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
@@ -40,7 +38,7 @@ public class Analyser {
 
     private void initData() throws IOException {
         for (int i = 0; i < 1000; i++) {
-            int num = makeGroup(i);
+            int num = makeNum(i);
             if (!groupNums.contains(num)) {
                 groupNums.add(num);
                 records.add(new RecordInfo(num));
@@ -54,7 +52,7 @@ public class Analyser {
         reader.close();
     }
 
-    private int makeGroup(int i) {
+    private int makeNum(int i) {
         if (mDirect)
             return i;
         List<Integer> data = new ArrayList<>();

@@ -20,8 +20,8 @@ public final class App {
         Collector collector = new Collector();
         Analyser analyser = new Analyser();
         Lottery lottery = new Lottery();
-        analyser.start();
+        // analyser.start();
         // collector.start();
-        // lottery.start();
+        lottery.start();
     }
 }
